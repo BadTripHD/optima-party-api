@@ -8,23 +8,23 @@ use Doctrine\ORM\Mapping as ORM;
  * Stuff
  *
  * @ORM\Table(name="stuff", indexes={@ORM\Index(name="FK_STUFF_APPARTENI_CATEGORY", columns={"CATEGORY_ID"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\StuffRepository")
  */
 class Stuff
 {
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="STUFF_ID", type="integer", nullable=false)
+     * @ORM\Column(name="STUFF_ID", type="string", length=36, nullable=false, options={"fixed"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $stuffId;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="CATEGORY_ID", type="integer", nullable=false)
+     * @ORM\Column(name="CATEGORY_ID", type="string", length=36, nullable=false, options={"fixed"=true})
      */
     private $categoryId;
 
@@ -42,17 +42,17 @@ class Stuff
      */
     private $stuffQuantity;
 
-    public function getStuffId(): ?int
+    public function getStuffId(): ?string
     {
         return $this->stuffId;
     }
 
-    public function getCategoryId(): ?int
+    public function getCategoryId(): ?string
     {
         return $this->categoryId;
     }
 
-    public function setCategoryId(int $categoryId): self
+    public function setCategoryId(string $categoryId): self
     {
         $this->categoryId = $categoryId;
 

@@ -8,14 +8,14 @@ use Doctrine\ORM\Mapping as ORM;
  * Place
  *
  * @ORM\Table(name="place")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\PlaceRepository")
  */
 class Place
 {
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="PLACE_ID", type="integer", nullable=false)
+     * @ORM\Column(name="PLACE_ID", type="string", length=36, nullable=false, options={"fixed"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
@@ -49,7 +49,7 @@ class Place
      */
     private $placeLocality;
 
-    public function getPlaceId(): ?int
+    public function getPlaceId(): ?string
     {
         return $this->placeId;
     }

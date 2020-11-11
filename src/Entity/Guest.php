@@ -8,23 +8,23 @@ use Doctrine\ORM\Mapping as ORM;
  * Guest
  *
  * @ORM\Table(name="guest", indexes={@ORM\Index(name="LAW", columns={"LAW_ID"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\GuestRepository")
  */
 class Guest
 {
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="GUEST_ID", type="integer", nullable=false)
+     * @ORM\Column(name="GUEST_ID", type="string", length=36, nullable=false, options={"fixed"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $guestId;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="LAW_ID", type="integer", nullable=false)
+     * @ORM\Column(name="LAW_ID", type="string", length=36, nullable=false, options={"fixed"=true})
      */
     private $lawId;
 
@@ -42,17 +42,17 @@ class Guest
      */
     private $guestLastname;
 
-    public function getGuestId(): ?int
+    public function getGuestId(): ?string
     {
         return $this->guestId;
     }
 
-    public function getLawId(): ?int
+    public function getLawId(): ?string
     {
         return $this->lawId;
     }
 
-    public function setLawId(int $lawId): self
+    public function setLawId(string $lawId): self
     {
         $this->lawId = $lawId;
 

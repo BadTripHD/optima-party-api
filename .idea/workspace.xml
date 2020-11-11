@@ -26,30 +26,26 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cdc9f93e-148e-49ed-aafe-e3671e2a6f69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterDir="false" />
+    <list default="true" id="cdc9f93e-148e-49ed-aafe-e3671e2a6f69" name="Default Changelist" comment="Make controller and Entity">
       <change afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ApiDeleteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ApiGetController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ApiPostController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/ApiPutController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Contain.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Guest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Law.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Participate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Party.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Place.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Stuff.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/CategoryRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ContainRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/GuestRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/LawRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/ParticipateRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/PartyRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/PlaceRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/StuffRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/BaptisteController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Baptiste.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/BaptisteRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ApiPostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ApiPostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Contain.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Contain.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Guest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Guest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Law.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Law.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Participate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Participate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Party.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Party.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Place.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Place.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Stuff.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Stuff.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -192,7 +188,17 @@
       <workItem from="1605101908413" duration="2042000" />
       <workItem from="1605104107270" duration="146000" />
       <workItem from="1605104268553" duration="1426000" />
+      <workItem from="1605105724139" duration="2186000" />
+      <workItem from="1605109326621" duration="634000" />
     </task>
+    <task id="LOCAL-00001" summary="Make controller and Entity">
+      <created>1605105780902</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605105780902</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +230,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Make controller and Entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make controller and Entity" />
   </component>
   <component name="WindowStateProjectService">
     <state x="540" y="175" key="#CLI_Interpreters" timestamp="1605101888259">
@@ -286,10 +294,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605103859501" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605103102976">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1605105786520">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605103102976" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605105786520" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605105826987">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605105826987" />
     <state x="855" y="274" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1604858329837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

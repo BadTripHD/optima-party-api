@@ -8,23 +8,23 @@ use Doctrine\ORM\Mapping as ORM;
  * Party
  *
  * @ORM\Table(name="party", indexes={@ORM\Index(name="FK_PARTY_DEROULER_PLACE", columns={"PLACE_ID"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\PartyRepository")
  */
 class Party
 {
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="PARTY_ID", type="integer", nullable=false)
+     * @ORM\Column(name="PARTY_ID", type="string", length=36, nullable=false, options={"fixed"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     private $partyId;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="PLACE_ID", type="integer", nullable=false)
+     * @ORM\Column(name="PLACE_ID", type="string", length=36, nullable=false, options={"fixed"=true})
      */
     private $placeId;
 
@@ -42,17 +42,17 @@ class Party
      */
     private $partyDate;
 
-    public function getPartyId(): ?int
+    public function getPartyId(): ?string
     {
         return $this->partyId;
     }
 
-    public function getPlaceId(): ?int
+    public function getPlaceId(): ?string
     {
         return $this->placeId;
     }
 
-    public function setPlaceId(int $placeId): self
+    public function setPlaceId(string $placeId): self
     {
         $this->placeId = $placeId;
 

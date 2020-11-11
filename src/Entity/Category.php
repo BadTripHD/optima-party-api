@@ -8,14 +8,14 @@ use Doctrine\ORM\Mapping as ORM;
  * Category
  *
  * @ORM\Table(name="category")
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\CategoryRepository")
  */
 class Category
 {
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="CATEGORY_ID", type="integer", nullable=false)
+     * @ORM\Column(name="CATEGORY_ID", type="string", length=36, nullable=false, options={"fixed"=true})
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
@@ -28,7 +28,7 @@ class Category
      */
     private $categoryName;
 
-    public function getCategoryId(): ?int
+    public function getCategoryId(): ?string
     {
         return $this->categoryId;
     }
