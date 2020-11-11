@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -30,16 +27,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdc9f93e-148e-49ed-aafe-e3671e2a6f69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/migrations/Version20201110124845.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/BaptisteController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Baptiste.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/BaptisteRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/optima-party-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/optima-party-api.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/prod/doctrine.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/packages/sensio_framework_extra.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ApiDeleteController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ApiGetController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ApiPostController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/ApiPutController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Contain.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Guest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Law.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Participate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Party.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Place.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Stuff.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BaptisteController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Baptiste.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/BaptisteRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,10 +89,7 @@
     </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitToolBoxStore">
-    <option name="projectConfigVersion" value="2" />
-  </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.4">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/symfony/string" />
@@ -157,33 +163,20 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../wamp64/bin/php/php7.4.0/php.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Logiciel/wamp64/bin/php/php7.4.0/php.exe" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RunDashboard">
-    <option name="configurationTypes">
-      <set>
-        <option value="PhpLocalRunConfigurationType" />
-      </set>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="Symfony API" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/bin/console" scriptParameters="--version">
       <CommandLine>
         <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP" />
+          <option name="interpreterName" value="PHP 7.4" />
         </PhpTestInterpreterSettings>
-        <envs>
-          <env name="DATABASE_NAME" value="xnviardcbm725" />
-          <env name="DATABASE_PASSWORD" value="5Ci4F3r7Js" />
-          <env name="DATABASE_PORT" value="3306" />
-          <env name="DATABASE_USER" value="xnviardcbm725" />
-        </envs>
       </CommandLine>
       <method v="2">
-        <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_serverStart" />
+        <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_server:start" />
       </method>
     </configuration>
   </component>
@@ -196,24 +189,10 @@
       <option name="presentableId" value="Default" />
       <updated>1604858184953</updated>
       <workItem from="1604858186714" duration="397000" />
-      <workItem from="1604858922561" duration="61000" />
-      <workItem from="1604858995338" duration="77000" />
-      <workItem from="1604997307404" duration="331000" />
-      <workItem from="1604997657159" duration="718000" />
-      <workItem from="1604998498729" duration="2922000" />
-      <workItem from="1605001446274" duration="5864000" />
-      <workItem from="1605011439472" duration="6140000" />
-      <workItem from="1605086010120" duration="897000" />
-      <workItem from="1605087557270" duration="379000" />
+      <workItem from="1605101908413" duration="2042000" />
+      <workItem from="1605104107270" duration="146000" />
+      <workItem from="1605104268553" duration="1426000" />
     </task>
-    <task id="LOCAL-00001" summary="je sais pas ce que c'est">
-      <created>1604997848875</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1604997848875</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,109 +224,79 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="je sais pas ce que c'est" />
-    <option name="LAST_COMMIT_MESSAGE" value="je sais pas ce que c'est" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-1380" y="179" key="#CLI_Interpreters" timestamp="1605017382389">
-      <screen x="-1920" y="4" width="1920" height="1040" />
+    <state x="540" y="175" key="#CLI_Interpreters" timestamp="1605101888259">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1380" y="179" key="#CLI_Interpreters/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605017382389" />
-    <state x="432" y="135" key="#CLI_Interpreters/0.0.1536.824@0.0.1536.824" timestamp="1605011270403" />
+    <state x="540" y="175" key="#CLI_Interpreters/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605101888259" />
     <state x="705" y="344" key="#Notifications" timestamp="1604858475692">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="705" y="344" key="#Notifications/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604858475692" />
-    <state x="-1414" y="110" key="#PHP" timestamp="1604997973920">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state x="667" y="182" key="#PHP/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604858335343" />
-    <state x="-1414" y="110" key="#PHP/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1604997973920" />
-    <state x="-1506" y="179" width="1092" height="766" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605001917539">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state x="414" y="175" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604858352330" />
-    <state x="-1506" y="179" width="1092" height="766" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605001917539" />
-    <state x="-1206" y="393" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1604858981609">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state x="-1206" y="393" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1604858981609" />
-    <state x="-1626" y="360" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1604998869309">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state x="-1626" y="360" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1604998869309" />
-    <state x="-1337" y="114" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1605015054091">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state x="-1337" y="114" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605015054091" />
-    <state x="-1633" y="407" width="454" height="496" key="#com.intellij.tools.ToolEditorDialog" timestamp="1604999110717">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state x="-1633" y="407" width="454" height="496" key="#com.intellij.tools.ToolEditorDialog/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1604999110717" />
-    <state x="-1013" y="312" width="612" height="499" key="EnvironmentVariablesDialog" timestamp="1605001916985">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state x="-1013" y="312" width="612" height="499" key="EnvironmentVariablesDialog/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605001916985" />
-    <state x="-479" y="374" width="440" height="501" key="FileChooserDialogImpl" timestamp="1605017378291">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state x="740" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604858319953" />
-    <state x="-479" y="374" width="440" height="501" key="FileChooserDialogImpl/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605017378291" />
-    <state x="1153" y="293" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605011246769" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1605036638162">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604858375975" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605036638162" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1605036638160">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604858375975" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605036638160" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1605036638159">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604858375975" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605036638159" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1605036638161">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604858375975" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605036638161" />
-    <state x="-1169" y="226" key="RollbackChangesDialog" timestamp="1604911886529">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state x="-1169" y="226" key="RollbackChangesDialog/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1604911886529" />
-    <state x="-1459" y="169" key="SettingsEditor" timestamp="1605017386771">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state x="-1459" y="169" key="SettingsEditor/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605017386771" />
-    <state x="369" y="115" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605011273677" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1605001966160">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605001966160" />
-    <state x="-1368" y="244" key="Vcs.Push.Dialog.v2" timestamp="1604997850673">
-      <screen x="-1920" y="4" width="1920" height="1040" />
-    </state>
-    <state x="-1368" y="244" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1604997850673" />
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604858531591">
+    <state x="667" y="182" key="#PHP" timestamp="1604858335343">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604858531591" />
-    <state x="-1436" y="417" width="210" height="467" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1604999113885">
-      <screen x="-1920" y="4" width="1920" height="1040" />
+    <state x="667" y="182" key="#PHP/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604858335343" />
+    <state x="414" y="175" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605104883958">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605104883958" />
+    <state x="740" y="294" key="FileChooserDialogImpl" timestamp="1605101811785">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="294" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605101811785" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1605105705042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605105705042" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1605105705042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605105705042" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1605105705042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605105705042" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1605105705042">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605105705042" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1605104253606">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605104253606" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1605104253606">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605104253606" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1605104253606">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605104253606" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1605104253606">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605104253606" />
+    <state x="713" y="222" key="RollbackChangesDialog" timestamp="1605105468150">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="713" y="222" key="RollbackChangesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605105468150" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1605103859501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605103859501" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605103102976">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605103102976" />
+    <state x="855" y="274" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey" timestamp="1604858329837">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="855" y="274" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604858329837" />
-    <state x="-1436" y="417" width="210" height="467" key="com.intellij.tools.ToolSelectDialog.dimensionServiceKey/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1604999113885" />
-    <state x="-1304" y="242" key="run.anything.popup" timestamp="1605005306976">
-      <screen x="-1920" y="4" width="1920" height="1040" />
+    <state x="0" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog" timestamp="1605104200631">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1304" y="242" key="run.anything.popup/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605005306976" />
-    <state x="270" y="165" width="672" height="538" key="search.everywhere.popup" timestamp="1605086398150">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="-1582" y="212" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.4.1920.1040@-1920.4.1920.1040" timestamp="1605001873736" />
-    <state x="270" y="165" width="672" height="538" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605086398150" />
+    <state x="0" y="0" key="com.jetbrains.php.config.phpInfo.PhpInfo.PhpInfoDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605104200631" />
   </component>
 </project>
